@@ -1,5 +1,3 @@
-//* Reset
-
 //Box sizing
 *,
 *::after,
@@ -153,8 +151,8 @@ button:-moz-focusring,
 
 // Correct the inability to style clickable types in iOS and Safari.
 ::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
+	-webkit-appearance: button;
+	font: inherit;
 }
 
 // Add the correct display in all browsers.
