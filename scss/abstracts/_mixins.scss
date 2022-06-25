@@ -71,23 +71,11 @@
 	}
 }
 
-//result
-// div {
-// 	background-color: red;
-// 	@include width-height(100px, "");
-// }
-
 @mixin icon {
 	mask-size: contain;
 	mask-repeat: no-repeat;
 	mask-position: center;
 }
-
-// @each $icon in $icons {
-// 	.icon.#{$icon} {
-// 		mask-image: url("svg/#{$icon}.svg");
-// 	}
-// }
 
 @mixin thumbnail($max-width) {
 	object-fit: cover;
