@@ -1,0 +1,98 @@
+@mixin text-shorten {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin flex-box($direction, $gap, $align, $justify) {
+	display: flex;
+	flex-direction: $direction;
+	gap: $gap;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+	position: $position;
+	inset: $top $right $bottom $left;
+}
+
+@mixin appearance-none {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+@mixin typography($font-size, $letter-spacing, $text-trasform) {
+	font-size: $font-size;
+	letter-spacing: $letter-spacing;
+	text-transform: $text-trasform;
+}
+
+@mixin reset-list {
+	list-style: none;
+	padding: 0;
+}
+
+@mixin background($position, $size, $repeat) {
+	background-position: $position;
+	background-size: $size;
+	background-repeat: $repeat;
+}
+
+//to change text color based on bg color
+@function set-text-color($color) {
+	@if (lightness($color) > 45%) {
+		@return $neutral-900;
+	} @else {
+		@return $background-white;
+	}
+}
+
+@mixin set-bg($color) {
+	background-color: $color;
+	color: set-text-color($color);
+}
+
+@mixin input-layout($border-radius, $border-size, $border-color, $position) {
+	border-radius: $border-radius;
+	border: $border-size solid $border-color;
+	position: $position;
+}
+
+@mixin width-height($width, $height) {
+	width: $width;
+	height: $height;
+	@if $height != "" {
+		height: $height;
+	} @else {
+		height: $width;
+	}
+}
+
+//result
+// div {
+// 	background-color: red;
+// 	@include width-height(100px, "");
+// }
+
+@mixin icon {
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+// @each $icon in $icons {
+// 	.icon.#{$icon} {
+// 		mask-image: url("svg/#{$icon}.svg");
+// 	}
+// }
+
+@mixin thumbnail($max-width) {
+	object-fit: cover;
+	aspect-ratio: 1/1;
+	transition: 0.2s;
+	border-radius: 50%;
+	max-width: $max-width;
+}
