@@ -4,6 +4,16 @@
 	white-space: nowrap;
 }
 
+@mixin quick-center {
+	margin-inline: auto;
+}
+
+@mixin pseudo-element($content: "", $display: block, $position: absolute) {
+	content: $content;
+	display: $display;
+	position: $position;
+}
+
 @mixin flex-box($direction, $gap, $align, $justify) {
 	display: flex;
 	flex-direction: $direction;
@@ -24,10 +34,20 @@
 	appearance: none;
 }
 
-@mixin typography($font-size, $letter-spacing, $text-trasform) {
+@mixin typography(
+	$font-size,
+	$font-weight,
+	$letter-spacing: false,
+	$text-trasform: false
+) {
 	font-size: $font-size;
-	letter-spacing: $letter-spacing;
-	text-transform: $text-trasform;
+	font-weight: $font-weight;
+	@if $letter-spacing {
+		letter-spacing: $letter-spacing;
+	}
+	@if $text-trasform {
+		text-transform: $text-trasform;
+	}
 }
 
 @mixin reset-list {

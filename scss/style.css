@@ -129,9 +129,7 @@ button:-moz-focusring,
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
 
 details {
@@ -165,4 +163,29 @@ template {
             transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+div {
+  background-color: red;
+  width: 100px;
+  height: "";
+  height: 100px;
+  margin-inline: auto;
+}
+
+div:after {
+  width: 10px;
+  height: "";
+  height: 10px;
+  background-color: burlywood;
+  content: "ciao";
+  display: inline;
+  position: relative;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  letter-spacing: 3px;
 }
