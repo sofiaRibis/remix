@@ -1,2 +1,7 @@
 @import "./abstracts/mixins";
 @import "./base/reset";
+
+ul {
+	@include list-style(circle);
+	color: red;
+}

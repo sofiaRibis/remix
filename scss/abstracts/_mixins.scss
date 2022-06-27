@@ -50,9 +50,9 @@
 	}
 }
 
-@mixin reset-list {
-	list-style: none;
-	padding: 0;
+@mixin list-style($list-style) {
+	list-style: $list-style;
+	padding-left: 40px;
 }
 
 @mixin background($position, $size, $repeat) {
