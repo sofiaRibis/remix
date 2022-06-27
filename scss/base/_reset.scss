@@ -4,11 +4,6 @@
 *::before {
 	box-sizing: border-box;
 	margin: 0;
-}
-
-//to make the list marker visible (else them would be in overflow hidden)
-*::after:not(ul),
-*::before:not(ul) {
 	padding: 0;
 }
 
@@ -31,6 +26,12 @@ body {
 	-webkit-text-size-adjust: 100%;
 	// Improve text rendering
 	-webkit-font-smoothing: antialiased;
+}
+
+//remove ul/ol style
+ul,
+ol {
+	list-style: none;
 }
 
 // Improve media defaults
