@@ -109,3 +109,8 @@
 @mixin grid-container($size) {
 	grid-template-columns: repeat(auto-fit, minmax(100%, $size), 1fr);
 }
+
+// this is to center an element inside a grid container that have to be always center
+@mixin grid-item-center() {
+	grid-column: 1/-1;
+}

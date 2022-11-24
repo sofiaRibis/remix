@@ -1,0 +1,46 @@
+// @import "../examples/example";
+
+//result for width-height mixin
+div {
+	background-color: red;
+	@include width-height(100px, "");
+	@include quick-center;
+	&:after {
+		@include width-height(10px, "");
+		background-color: burlywood;
+		// @include pseudo-element; //default version
+		@include pseudo-element("ciao", inline, relative); //custom version
+	}
+}
+
+h1 {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	@include typography(
+		2em,
+		bolder,
+		3px,
+		null
+	); // lettr spacing and text trasform are by default false if i gave them a value ok else i write null that property wont be existing
+}
+
+ul {
+	@include list-style(circle);
+	color: red;
+}
+
+//to make the list marker visible (else them would be in overflow hidden)
+// *::after:not(ul),
+// *::before:not(ul) {
+// 	padding: 0;
+// }
+
+// @mixin reset-list {
+// 	list-style: none;
+// 	padding: 0;
+// }
+
+// @each $icon in $icons {
+// 	.icon.#{$icon} {
+// 		mask-image: url("svg/#{$icon}.svg");
+// 	}
+// }
