@@ -91,10 +91,18 @@
 	}
 }
 
-@mixin icon {
+@mixin icon-size {
 	mask-size: contain;
 	mask-repeat: no-repeat;
 	mask-position: center;
+}
+
+@mixin icon-factory($url, $position, $size, $repeat, $width, $height) {
+	@include icon-size;
+	mask-image: url($url);
+	-webkit-mask-image: url($url);
+	@include background($position, $size, $repeat);
+	@include width-height($width, $height);
 }
 
 @mixin thumbnail($max-width) {
@@ -110,7 +118,7 @@
 	grid-template-columns: repeat(auto-fit, minmax(100%, $size), 1fr);
 }
 
-// this is to center an element inside a grid container that have to be always center
+//center an element inside a grid container that have to be always center no matter n of columns
 @mixin grid-item-center() {
 	grid-column: 1/-1;
 }

@@ -1,0 +1,15 @@
+// use this with icon-factory mixin
+$colors: (
+	"black": black,
+	"yellow": yellow,
+	"orange": orange,
+	"red": red,
+	"blue": blue,
+	"grey": grey,
+);
+
+@each $colorVal, $color in $colors {
+	.icon--#{$color} {
+		background-color: $color;
+	}
+}
