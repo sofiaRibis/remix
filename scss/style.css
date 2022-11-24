@@ -4,10 +4,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-}
-
-*::after:not(ul),
-*::before:not(ul) {
   padding: 0;
 }
 
@@ -24,6 +20,11 @@ body {
   min-height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 img,
@@ -163,29 +164,4 @@ template {
             transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-div {
-  background-color: red;
-  width: 100px;
-  height: "";
-  height: 100px;
-  margin-inline: auto;
-}
-
-div:after {
-  width: 10px;
-  height: "";
-  height: 10px;
-  background-color: burlywood;
-  content: "ciao";
-  display: inline;
-  position: relative;
-}
-
-h1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 2em;
-  font-weight: bolder;
-  letter-spacing: 3px;
 }

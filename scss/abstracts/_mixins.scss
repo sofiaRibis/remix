@@ -104,3 +104,8 @@
 	border-radius: 50%;
 	max-width: $max-width;
 }
+
+// for responsive grid w/out media queries
+@mixin grid-container($size) {
+	grid-template-columns: repeat(auto-fit, minmax(100%, $size), 1fr);
+}
