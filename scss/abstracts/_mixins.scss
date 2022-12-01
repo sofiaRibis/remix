@@ -81,13 +81,11 @@
 	position: $position;
 }
 
-@mixin width-height($width, $height) {
+@mixin width-height($width, $height: false) {
 	width: $width;
-	height: $height;
-	@if $height != "" {
+	height: $width;
+	@if $height {
 		height: $height;
-	} @else {
-		height: $width;
 	}
 }
 
