@@ -65,6 +65,8 @@ select {
 	// by default those elements DON'T INHERIT font properties so doing that they will
 	font: inherit;
 	outline: none;
+	cursor: pointer;
+	border: none;
 }
 
 hr {
@@ -82,8 +84,9 @@ pre {
 	font-size: 1em;
 }
 
-//Remove the gray background on active links in IE 10.
 a {
+	text-decoration: none;
+	//Remove the gray background on active links in IE 10.
 	background-color: transparent;
 }
 
